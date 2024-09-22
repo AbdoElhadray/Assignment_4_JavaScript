@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+
+<body>
+
+    <!-- signInPage -->
+
+    <div class="container  d-block" id="SignINPage">
+        <h1>Smart Login System</h1>
+
+        <input id="SignInEmail" type="text " class="inputControl mt-4 " placeholder="Enter your Email ">
+        <input id="SignINPass" type="text " class="inputControl mt-4" placeholder="Enter your password ">
+        <p id="required" class="required d-none">All inputs is required</p>
+        <p id="incorrect" class="required d-none">incorrect email or password or not registerd</p>
+        <button class="btn" onclick="signIn();">Login</button>
+        <p>
+            Don’t have an account?
+            <a onclick="setToSignUp();">Sign Up</a>
+
+        </p>
+
+    </div>
+
+    <!-- signUP Page -->
+    <div id="SignUpPage" class="container signUpCont   d-none">
+        <h1>Smart Login System</h1>
+        <input id="Name" type="text " class="inputControl mt-2" placeholder="Enter your name ">
+        <input id="Email" type="email " class="inputControl mt-2 " placeholder="Enter your Email ">
+        <input id="Password" type="password " class="inputControl mt-2" placeholder="Enter your password ">
+        <p id="exsit" class="required d-none ">this Email already exist</p>
+        <p id="invalid" class="required d-none ">Email is Invalid</p>
+        <p id="Success" class="success  d-none">Success</p>
+        <p id="required2" class="required d-none">All inputs is required</p>
+        <button onclick="signUp();" class="btn">sign up</button>
+        <p>
+            You have an account?
+            <a href="">Sign in</a>
+
+        </p>
+
+
+
+    </div>
+
+
+    <!-- welcome page -->
+    <div id="Welcome" class="d-none">
+        <nav class="navbar navbar-dark ">
+            <div class=" ms-5 fs-4 ">
+                <a class=" text-decoration-none justify-content-center" href="#">SMART LOGIN</a>
+            </div>
+            <div class=" container-fluid justify-content-end me-5 w-25">
+
+                <button onclick="signINBack();" class="navbar-toggler p-2 " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <a href="" class=" text-decoration-none ">Logout</a>
+                </button>
+            </div>
+        </nav>
+        <div class="container welcome h-25">
+            <h1 id="welcomeUser"> </h1>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
